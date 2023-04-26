@@ -1,7 +1,7 @@
 #Game to find the Treasure
 print("Welcome. Your objective is to find the treaure. Wish you luck on your adventure.")
 
-direction = input("Which direction do you want to go? Type 'Left' or 'Right'\n")
+direction = input("You are at a crossroads. Which direction do you want to go? Type 'Left' or 'Right'\n")
 
 if direction == "Left" or direction == "left":
   way = input("You are infront of a mountain. Do you want to climb it to get across or dig a tunnel? Type 'Climb' or 'Dig'\n")
