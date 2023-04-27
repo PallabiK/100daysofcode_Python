@@ -1,5 +1,5 @@
 import random
-
+print("Let's Play Rock-Paper-Scissor")
 rock = '''
     _______
 ---'   ____)
