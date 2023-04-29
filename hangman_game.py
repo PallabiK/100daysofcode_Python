@@ -29,7 +29,7 @@ while not end_of_game:
       if lives == 0:
         end_of_game = True
         print("You lose.")
-        print(f"Your word was {chosen_word}")
+        print(f"Your word was {chosen_word}.")
     for position in range(word_length):
         letter = chosen_word[position]
         if letter == guess:
