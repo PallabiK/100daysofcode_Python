@@ -1,7 +1,7 @@
 from replit import clear
 import calc_art
 
-print (art.logo)
+print (calc_art.logo)
 print("Welcome to the secret auction!")
 
 def find_bid_winner(dict):
