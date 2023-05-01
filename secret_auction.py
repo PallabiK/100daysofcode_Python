@@ -1,5 +1,5 @@
 from replit import clear
-import art
+import calc_art
 
 print (art.logo)
 print("Welcome to the secret auction!")
