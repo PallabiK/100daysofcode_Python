@@ -49,7 +49,7 @@ def compare(user_score, computer_score):
     return "You lose. :/"
 
 def play_game():
-  print(art.logo)
+  print(blackjack_art.logo)
   user_cards = []
   computer_cards = []
   game_over = False
