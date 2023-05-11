@@ -26,3 +26,10 @@ class Scoreboard(Turtle):
         self.r_score += 1
         self.update_scoreboard()
 
+    def game_over(self):
+        if self.l_score == 10 or self.r_score == 10:
+            self.goto(0, 50)
+            self.write("Game Over", align="center", font=("Courier", 40, "normal"))
+            self.goto(0, -50)
+            self.write(f"Final Score\n Left {self.l_score}    Right {self.r_score}", align="center", font=("Courier", 30, "normal"))
+            return False

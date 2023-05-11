@@ -15,6 +15,18 @@ l_paddle = Paddle((-350, 0))
 ball = Ball()
 scoreboard = Scoreboard()
 
+midline = Turtle()
+midline.penup()
+midline.hideturtle()
+midline.goto(0,300)
+midline.setheading(270)
+midline.color("white")
+while midline.ycor() > -300:
+    midline.pendown()
+    midline.forward(10)
+    midline.penup()
+    midline.forward(10)
+
 screen.listen()
 screen.onkey(r_paddle.go_up, "Up")
 screen.onkey(r_paddle.go_down, "Down")
@@ -46,6 +58,9 @@ while game_is_on:
     if ball.xcor() < -380:
         ball.reset_position()
         scoreboard.r_point()
+
+    is_game_on = scoreboard.game_over()
+    
 
 
 
