@@ -60,7 +60,7 @@ while game_is_on:
         scoreboard.r_point()
 
     is_game_on = scoreboard.game_over()
-    
+
 
 
 
