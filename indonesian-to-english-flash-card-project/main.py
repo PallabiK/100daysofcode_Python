@@ -24,8 +24,8 @@ def next_card():
     window.after_cancel(flip_timer)
     current_card = choice(to_learn)
     canvas.itemconfig(card_background, image=card_front_img)
-    canvas.itemconfig(card_title, text="French", fill="black")
-    canvas.itemconfig(card_word, text=current_card["French"], fill="black")
+    canvas.itemconfig(card_title, text="Indonesian", fill="black")
+    canvas.itemconfig(card_word, text=current_card["Indonesian"], fill="black")
     flip_timer = window.after(TIMER, func=flip_card)
 
 def is_known():
@@ -47,7 +47,7 @@ window.config(padx=50, pady=50, bg=BACKGROUND_COLOR)
 
 flip_timer = window.after(TIMER, func=flip_card)
 
-#canvas with french word
+#canvas with Indonesian word
 canvas = Canvas(width=800, height=526, bg=BACKGROUND_COLOR, highlightthickness=0)
 card_front_img=PhotoImage(file="images/card_front.png")
 card_back_img = PhotoImage(file="images/card_back.png")
