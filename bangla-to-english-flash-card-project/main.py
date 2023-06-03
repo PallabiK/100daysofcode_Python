@@ -35,9 +35,15 @@ def is_known():
     next_card()
 
 def flip_card():
-    canvas.itemconfig(card_background, image=card_back_img)
-    canvas.itemconfig(card_title, text="English", fill="white")
-    canvas.itemconfig(card_word, text=current_card["English"], fill="white")
+    txt = canvas.itemcget(card_title, 'text')
+    if txt == "Bangla":
+        canvas.itemconfig(card_background, image=card_back_img)
+        canvas.itemconfig(card_title, text="English", fill="white")
+        canvas.itemconfig(card_word, text=current_card["English"], fill="white")
+    else:
+        canvas.itemconfig(card_background, image=card_front_img)
+        canvas.itemconfig(card_title, text="Bangla", fill="black")
+        canvas.itemconfig(card_word, text=current_card["Bangla"], fill="black")
 
 
 #-------UI Setup ------#
@@ -47,7 +53,7 @@ window.config(padx=50, pady=50, bg=BACKGROUND_COLOR)
 
 #flip_timer = window.after(TIMER, func=flip_card)
 
-#canvas with Indonesian word
+#canvas with Bangla word
 canvas = Canvas(width=800, height=526, bg=BACKGROUND_COLOR, highlightthickness=0)
 card_front_img=PhotoImage(file="images/card_front.png")
 card_back_img = PhotoImage(file="images/card_back.png")
@@ -55,6 +61,8 @@ card_background = canvas.create_image(400, 263, image=card_front_img)
 canvas.grid(column=0, row=0, columnspan=3)
 card_title = canvas.create_text(400, 150, text="Title", fill="black", font=(FONT, 40, "italic"))
 card_word = canvas.create_text(400, 263, text="Word", font=(FONT, 60, "bold"))
+
+
 
 
 
@@ -72,6 +80,8 @@ known_button = Button(image=known_img, highlightthickness=0, command=is_known)
 known_button.grid(column=2, row=1)
 
 next_card()
+
+
 
 
 
