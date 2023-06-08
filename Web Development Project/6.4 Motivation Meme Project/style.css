@@ -7,20 +7,16 @@ img{
     width: 100%;
 }
 
-h1{
-    font-family: 'Libre Baskerville', serif;
-    color: white;
-    text-align: center;
-    text-transform: capitalize;
-}
-
-p{
-    color: white;
-    text-align: center;
-}
 
 div{
     width: 50%;
     margin-left: 25%;
     margin-top: 10%;
+    font-family: 'Libre Baskerville', serif;
+    color: white;
+    text-align: center;
+}
+
+h1{
+    text-transform: uppercase;
 }
