@@ -7,8 +7,7 @@ SP_CLIENT_ID = "YOURS"
 SP_CLIENT_SECRET = "YOURS"
 
 #input from user
-#date_from_user = input("What date do you want to go back to? Type in YYYY-MM-DD format:")
-date_from_user = "1995-05-23"
+date_from_user = input("What date do you want to go back to? Type in YYYY-MM-DD format:")
 
 #webscarpping from BILLBOARD
 URL = f"https://www.billboard.com/charts/hot-100/{date_from_user}/"
