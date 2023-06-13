@@ -4,9 +4,9 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 import time
 
-ACCOUNT_EMAIL = YOUR LOGIN EMAIL
-ACCOUNT_PASSWORD = YOUR LOGIN PASSWORD
-PHONE = YOUR PHONE NUMBER
+ACCOUNT_EMAIL = "YOUR LOGIN EMAIL"
+ACCOUNT_PASSWORD = "YOUR LOGIN PASSWORD"
+PHONE = "YOUR PHONE NUMBER"
 
 url = "Your URL"
 
@@ -36,7 +36,7 @@ time.sleep(5)
 # submit_button = driver.find_element(By.CSS_SELECTOR, "footer button")
 # submit_button.click()
 
-all_listings = driver.find_elements_by_css_selector(".job-card-container--clickable")
+all_listings = driver.find_elements(By.CSS_SELECTOR, ".job-card-container--clickable")
 
 for listing in all_listings:
     print("called")
